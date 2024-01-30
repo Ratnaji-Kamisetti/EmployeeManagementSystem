@@ -88,9 +88,6 @@ public class EmployeeServ {
 
         System.out.print("Enter Empid: ");
         int id = sc.nextInt();
-        boolean found = false;
-        for (Employee emp1 : empSet) {
-            if (emp1.getEmpId() == id) {
                 empId = id;
                 System.out.print("Enter name: ");
                 name = sc.next();
@@ -98,15 +95,10 @@ public class EmployeeServ {
                 department = sc.next();
                 System.out.print("Enter salary: ");
                 salary = sc.nextDouble();
-                found = true;
                 Employee emp = new Employee(id, name, department, salary);
                 empSet.add(emp);
                 System.out.println("Employee added successfully!!");
                 System.out.println(emp);
-            }
-        }
-        if(!found) {
-            System.out.println("Enetr valid");
-        }
+
     }
 }
